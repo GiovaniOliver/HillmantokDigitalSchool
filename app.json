@@ -4,25 +4,52 @@
     "slug": "HillmantokDigitalSchool",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "icon": "./assets/hillmantok-logo.png",
+    "userInterfaceStyle": "dark",
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/splashscreen.gif",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#2C1213"
     },
+    "newArchEnabled": true,
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hillmantokdigitalschool.app"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "foregroundImage": "./assets/hillmantok-logo.png",
+        "backgroundColor": "#2C1213"
+      },
+      "package": "com.hillmantokdigitalschool.app"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/hillmantok-logo.png",
+      "name": "Hillmantok Digital School",
+      "shortName": "Hillmantok",
+      "lang": "en",
+      "themeColor": "#1E1B4B",
+      "backgroundColor": "#111827",
+      "description": "Digital platform for all student activity",
+      "bundler": "webpack",
+      "build": {
+        "babel": {
+          "include": ["@expo/vector-icons", "nativewind"]
+        }
+      }
+    },
+    "plugins": [
+      [
+        "expo-video",
+        {
+          "enableFullscreen": false,
+          "enableAudioManager": true,
+          "enableCaching": true
+        }
+      ]
+    ]
   }
 }
